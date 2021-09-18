@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+.animate__animated.animate__bounceInUp {
+  --animate-duration: 5s;
+}
+
+.animate__animated.animate__bounceInDown {
+  --animate-duration: 2s;
+}
+
+.animate__animated.animate__backInDown {
+  --animate-duration: 2s;
+}
+
+.animate__animated.animate__backInUp {
+  --animate-duration: 3s;
+}
+
+* {
+  font-family: "Inconsolata", monospace;
+}
+
+.container {
+  width: 100vw;
+  max-width: 1500px;
+  background-color: #fef6e4;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 1500px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+.biography {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  flex-direction: column;
+}
+.biography .photo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.biography .photo .photo-container {
+  border: 5px solid #000;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.biography .photo .photo-container img {
+  width: 100%;
+  position: relative;
+  top: 10%;
+  left: 8%;
+}
+.biography .text {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.work {
+  column-count: 2;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.work .photo img {
+  max-width: 100%;
+}
+
+.sentence {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.sentence h2 {
+  width: 70%;
+  margin: auto;
+}
+.sentence h2 .beat {
+  animation: 5s ease infinite beat;
+  -webkit-animation: 5s ease infinite beat;
+  transition: 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  -moz-transition: 300ms ease-in-out;
+  -ms-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+.contact .social {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 11px;
+}
+footer a {
+  color: #000;
+  margin: 0 0.2rem;
+}
+
+@keyframes beat {
+  0% {
+    font-size: 3rem;
+  }
+  50% {
+    font-size: 4.5rem;
+  }
+  100% {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .biography {
+    flex-direction: row;
+  }
+  .biography .photo {
+    width: 50%;
+    justify-content: flex-end;
+  }
+  .biography .text {
+    width: 40%;
+    align-items: flex-start;
+  }
+
+  .work {
+    column-count: 4;
+    margin-top: 8rem;
+  }
+  .work .photo img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+  .work .photo img:hover {
+    filter: none;
+    -webkit-filter: none;
+  }
+
+  .sentence h2 {
+    width: auto;
+  }
+
+  .contact {
+    margin-top: 5rem;
+  }
+  .contact .social {
+    width: 15%;
+    align-items: center;
+  }
+  .contact .social a {
+    transition: 300ms ease-in-out;
+    -webkit-transition: 300ms ease-in-out;
+    -moz-transition: 300ms ease-in-out;
+    -ms-transition: 300ms ease-in-out;
+    -o-transition: 300ms ease-in-out;
+  }
+  .contact .social a:hover {
+    animation: move 3s infinite;
+  }
+}
+@keyframes move {
+  0% {
+    transform: rotateZ(-30deg) scale(1.5);
+    -webkit-transform: rotateZ(-30deg) scale(1.5);
+    -moz-transform: rotateZ(-30deg) scale(1.5);
+    -ms-transform: rotateZ(-30deg) scale(1.5);
+    -o-transform: rotateZ(-30deg) scale(1.5);
+  }
+  50% {
+    transform: rotateZ(30deg) scale(1.5);
+    -webkit-transform: rotateZ(30deg) scale(1.5);
+    -moz-transform: rotateZ(30deg) scale(1.5);
+    -ms-transform: rotateZ(30deg) scale(1.5);
+    -o-transform: rotateZ(30deg) scale(1.5);
+  }
+  100% {
+    transform: rotateZ(0deg) scale(1.5);
+    -webkit-transform: rotateZ(0deg) scale(1.5);
+    -moz-transform: rotateZ(0deg) scale(1.5);
+    -ms-transform: rotateZ(0deg) scale(1.5);
+    -o-transform: rotateZ(0deg) scale(1.5);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
